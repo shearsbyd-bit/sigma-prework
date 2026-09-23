@@ -1,4 +1,7 @@
-def formatting(user_input):
+def formatting(user_input): 
+    '''
+    Cleaning up the input from a string into a list of integers
+    '''
 
     cleaned = user_input.replace("[", "").replace("]", "")
     raw_items = cleaned.split(",")

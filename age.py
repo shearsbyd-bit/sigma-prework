@@ -2,12 +2,19 @@ import time
 import datetime as dt
 
 def input_formatter(raw_date):
+    '''
+    Turning the string into a list of days, months and years
+    '''
     cleaned_date = raw_date.replace("/", " ").replace(":", " ").replace(";", " ").replace("-", " ")
     formatted_date = cleaned_date.split()
     formatted_date_list = [float(x) for x in formatted_date]
     return formatted_date_list
 
 def date_comparer(formatted_date_list, formatted_current_date_list):
+
+    '''
+    A crude way to basically get the years by comparing the months and then if they are the same comparing the days...
+    '''
 
     if formatted_date_list[1] < formatted_current_date_list [1]:
         return formatted_current_date_list[0] - formatted_date_list[-1]
